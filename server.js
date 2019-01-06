@@ -1,7 +1,13 @@
 'use strict';
 
 const Hapi = require('hapi');
-const opn = require('opn');
+const request = require('request');
+const rp = require('request-promise');
+
+var async = require("async");
+
+
+const products = require('./product-ids.js')
 
 
 const server = Hapi.server({
@@ -33,6 +39,36 @@ const init = async () => {
 
     await server.start()
     console.log(`Magic happens at port: ${server.info.uri}`);
+
+
+
+
+    rp('http://api.walmartlabs.com/v1/items?ids=' + products.join(",") + '&apiKey=kjybrqfdgp3u4yv2qzcnjndj')
+    .then(function (response) {
+          // console.log(JSON.parse(response).items)
+          JSON.parse(response).items.forEach(item => {
+            console.log(item.itemId);
+          })
+
+    })
+    .catch(function (err) {
+          // Crawling failed...
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 };
 
 

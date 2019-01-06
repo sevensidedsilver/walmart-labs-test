@@ -23,6 +23,7 @@
     "http-server": "^0.11.1",
     "inert": "^5.1.2",
     "opn": "^5.4.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
   }
 }
