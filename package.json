@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/sevensidedsilver/walmart-labs-test/issues"
   },
-  "homepage": "https://github.com/sevensidedsilver/walmart-labs-test#readme"
+  "homepage": "https://github.com/sevensidedsilver/walmart-labs-test#readme",
+  "dependencies": {
+    "async": "^2.6.1",
+    "concurrently": "^4.1.0",
+    "hapi": "^17.8.1",
+    "http-server": "^0.11.1",
+    "inert": "^5.1.2",
+    "opn": "^5.4.0",
+    "request": "^2.88.0"
+  }
 }
