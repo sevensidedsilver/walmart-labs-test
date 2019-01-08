@@ -59,23 +59,6 @@ const init = async () => {
 
 
 
-
-    rp('http://api.walmartlabs.com/v1/items?ids=' + products.join(",") + '&apiKey=kjybrqfdgp3u4yv2qzcnjndj')
-    .then(function (response) {
-          // console.log(JSON.parse(response).items)
-          JSON.parse(response).items.forEach(item => {
-            console.log(item.itemId);
-          })
-
-    })
-    .catch(function (err) {
-          // Crawling failed...
-    });
-
-
-
-
-
 };
 
 
